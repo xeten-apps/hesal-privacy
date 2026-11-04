@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hesal App – Privacy Policy</title>
+<meta name="description" content="Privacy policy for the Hesal mobile app, a companion to HESAL CONTRACTING L.L.C's ERP, published by Xeten Information Services Private Limited.">
+<style>
+  :root {
+    --bg:#F6F7FB; --surface:#FFFFFF; --soft:#EEF2FF; --text:#0F172A; --muted:#556178;
+    --border:#E3E8F2; --accent:#1D4ED8; --accent-2:#0EA5E9; --accent-ink:#FFFFFF;
+    --good:#047857; --good-bg:#ECFDF5; --shadow:0 1px 2px rgba(15,23,42,.04), 0 8px 24px rgba(15,23,42,.06);
+    --hero-from:#1E3A8A; --hero-to:#1D4ED8; --hero-glow:#38BDF8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#080E1C; --surface:#0F172A; --soft:#14213D; --text:#E6ECF8; --muted:#97A3BC;
+      --border:#1E2A44; --accent:#8AB0FF; --accent-2:#38BDF8; --accent-ink:#0B1220;
+      --good:#34D399; --good-bg:#0B2A22; --shadow:none;
+      --hero-from:#0B1B44; --hero-to:#1B3A8F; --hero-glow:#2563EB;
+    }
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; scroll-padding-top:24px; }
+  body {
+    margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.7 "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a { color:var(--accent); text-underline-offset:3px; }
+  a:focus-visible, summary:focus-visible { outline:3px solid var(--accent-2); outline-offset:3px; border-radius:6px; }
+
+  /* Hero */
+  .hero {
+    position:relative; overflow:hidden; color:#fff;
+    background:linear-gradient(135deg, var(--hero-from), var(--hero-to));
+    padding:56px 20px 88px;
+  }
+  .hero::before, .hero::after {
+    content:""; position:absolute; border-radius:50%; pointer-events:none;
+    background:radial-gradient(closest-side, var(--hero-glow), transparent); opacity:.45;
+  }
+  .hero::before { width:520px; height:520px; right:-140px; top:-220px; }
+  .hero::after  { width:360px; height:360px; left:-120px; bottom:-200px; opacity:.28; }
+  .hero-inner { position:relative; max-width:1040px; margin:0 auto; }
+  .brand { display:flex; align-items:center; gap:12px; margin-bottom:32px; }
+  .logo {
+    width:44px; height:44px; border-radius:12px; display:grid; place-items:center;
+    background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28);
+    font-weight:800; font-size:1.25rem; letter-spacing:-.02em;
+  }
+  .brand span { font-weight:600; letter-spacing:.01em; opacity:.95; }
+  .hero h1 { font-size:clamp(2rem, 5vw, 3.1rem); line-height:1.1; letter-spacing:-.025em; margin:0 0 14px; font-weight:800; }
+  .hero p.lead { max-width:62ch; margin:0 0 22px; font-size:1.075rem; line-height:1.6; color:rgba(255,255,255,.88); }
+  .pill {
+    display:inline-flex; align-items:center; gap:8px; padding:6px 14px; border-radius:999px;
+    background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.26); font-size:.875rem; font-weight:500;
+  }
+  .pill i { width:8px; height:8px; border-radius:50%; background:#4ADE80; box-shadow:0 0 0 4px rgba(74,222,128,.25); }
+
+  /* Layout */
+  .wrap { max-width:1040px; margin:-48px auto 0; padding:0 20px 64px; position:relative; }
+  .layout { display:grid; grid-template-columns:230px minmax(0,1fr); gap:32px; align-items:start; }
+
+  /* TOC */
+  .toc {
+    position:sticky; top:24px; background:var(--surface); border:1px solid var(--border);
+    border-radius:16px; padding:18px 14px; box-shadow:var(--shadow);
+  }
+  .toc h2 { margin:0 8px 10px; font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-weight:700; }
+  .toc ol { list-style:none; margin:0; padding:0; counter-reset:t; }
+  .toc a {
+    display:flex; gap:10px; align-items:baseline; padding:7px 10px; border-radius:9px;
+    color:var(--muted); text-decoration:none; font-size:.92rem; line-height:1.35; counter-increment:t;
+  }
+  .toc a::before { content:counter(t); font-variant-numeric:tabular-nums; font-weight:700; font-size:.78rem; color:var(--accent); min-width:1ch; }
+  .toc a:hover { background:var(--soft); color:var(--text); }
+
+  /* Content */
+  .content { display:flex; flex-direction:column; gap:20px; min-width:0; }
+  .card {
+    background:var(--surface); border:1px solid var(--border); border-radius:18px;
+    padding:28px 30px; box-shadow:var(--shadow);
+  }
+  .card h2 { display:flex; align-items:center; gap:12px; margin:0 0 14px; font-size:1.3rem; line-height:1.25; letter-spacing:-.01em; }
+  .num {
+    flex:none; width:32px; height:32px; border-radius:10px; display:grid; place-items:center;
+    background:var(--soft); color:var(--accent); font-size:.9rem; font-weight:800;
+  }
+  .card p { margin:0 0 12px; }
+  .card p:last-child { margin-bottom:0; }
+  .card ul { margin:0; padding:0; list-style:none; display:grid; gap:10px; }
+  .card li { position:relative; padding-left:28px; }
+  .card li::before {
+    content:""; position:absolute; left:0; top:.45em; width:16px; height:16px; border-radius:50%;
+    background:var(--good-bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.4l2.2 2.2 4.8-5' fill='none' stroke='%23059669' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat;
+  }
+  .intro { border-left:4px solid var(--accent); background:linear-gradient(90deg, var(--soft), var(--surface) 70%); }
+  .intro p { color:var(--text); }
+
+  /* Highlights */
+  .highlights { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; margin-top:4px; }
+  .hl { background:var(--bg); border:1px solid var(--border); border-radius:14px; padding:16px; }
+  .hl b { display:block; margin-bottom:4px; font-size:.98rem; }
+  .hl span { color:var(--muted); font-size:.9rem; line-height:1.5; display:block; }
+  .hl .ico { width:36px; height:36px; border-radius:10px; display:grid; place-items:center; margin-bottom:12px; background:var(--soft); color:var(--accent); }
+  .ico svg { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+
+  /* Table */
+  .table-wrap { border:1px solid var(--border); border-radius:14px; overflow:hidden; margin:6px 0 16px; }
+  table { width:100%; border-collapse:collapse; font-size:.94rem; }
+  th, td { text-align:left; vertical-align:top; padding:14px 16px; }
+  thead th { background:var(--soft); color:var(--muted); font-size:.74rem; text-transform:uppercase; letter-spacing:.08em; font-weight:700; }
+  tbody tr + tr td { border-top:1px solid var(--border); }
+  tbody td:first-child { font-weight:600; width:32%; }
+
+  /* Note / callouts */
+  .tag {
+    display:inline-block; padding:2px 10px; border-radius:999px; font-size:.78rem; font-weight:700;
+    background:var(--good-bg); color:var(--good);
+  }
+  .split { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .split > div { background:var(--bg); border:1px solid var(--border); border-radius:14px; padding:18px; }
+  .split h3 { margin:0 0 6px; font-size:1rem; }
+  .split p { color:var(--muted); font-size:.95rem; }
+  .domain { font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:.92em; background:var(--soft); color:var(--accent); padding:2px 8px; border-radius:6px; }
+
+  /* Contact */
+  .contact { background:linear-gradient(135deg, var(--hero-from), var(--hero-to)); border:0; color:#fff; }
+  .contact .num { background:rgba(255,255,255,.18); color:#fff; }
+  .contact a { color:#fff; font-weight:600; }
+  .contact dl { display:grid; grid-template-columns:90px 1fr; gap:10px 16px; margin:0; }
+  .contact dt { color:rgba(255,255,255,.7); font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; padding-top:3px; font-weight:700; }
+  .contact dd { margin:0; }
+  .contact .org { font-weight:700; font-size:1.1rem; margin:0 0 14px; }
+
+  footer { text-align:center; color:var(--muted); font-size:.88rem; margin-top:32px; }
+
+  @media (max-width: 860px) {
+    .layout { grid-template-columns:1fr; }
+    .toc { position:static; }
+    .toc ol { display:grid; grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .hero { padding:40px 16px 80px; }
+    .wrap { padding:0 16px 48px; }
+    .card { padding:22px 18px; border-radius:16px; }
+    .highlights, .split, .toc ol { grid-template-columns:1fr; }
+    .table-wrap { border:0; border-radius:0; }
+    table, tbody, tr, td { display:block; width:100%; }
+    thead { position:absolute; left:-9999px; }
+    tbody tr { border:1px solid var(--border); border-radius:14px; padding:6px 0; margin-bottom:12px; background:var(--bg); }
+    tbody tr + tr td { border-top:0; }
+    tbody td:first-child { width:100%; }
+    td { padding:8px 16px; }
+    td[data-label]::before { content:attr(data-label); display:block; font-size:.7rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); font-weight:700; margin-bottom:2px; }
+    .contact dl { grid-template-columns:1fr; gap:2px; }
+    .contact dd { margin-bottom:10px; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
+  @media print {
+    .hero { background:none; color:#000; padding:0 0 16px; } .hero p.lead { color:#333; } .pill, .logo { border-color:#999; color:#000; background:none; }
+    .toc { display:none; } .layout { display:block; } .wrap { margin:0; } .card { box-shadow:none; break-inside:avoid; }
+    .contact { background:none; color:#000; border:1px solid #999; } .contact a, .contact dt { color:#000; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brand"><div class="logo">H</div><span>Hesal</span></div>
+    <h1>Privacy Policy</h1>
+    <p class="lead">How the Hesal app handles your information: what it uses, where it lives, and who can see it.</p>
+    <span class="pill"><i></i>Effective date: 04-11-2026</span>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="layout">
+
+    <nav class="toc" aria-label="Table of contents">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#information">Information handled</a></li>
+        <li><a href="#sharing">How information is shared</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#retention">Retention and deletion</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <main class="content">
+
+      <section class="card intro">
+        <p>
+          Hesal is a mobile companion app for the ERP system of <strong>HESAL CONTRACTING L.L.C</strong> (“HESAL”).
+          It is developed and published by <strong>Xeten Information Services Private Limited</strong> (“Xeten”, “we”, “us”).
+          The app is intended for HESAL staff and authorised users who already have an account on HESAL’s ERP.
+        </p>
+      </section>
+
+      <section class="card" id="summary">
+        <h2><span class="num">1</span>Summary</h2>
+        <div class="highlights" role="list">
+          <div class="hl" role="listitem">
+            <div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+            <b>Only what is needed</b>
+            <span>The app only uses the information needed to sign you in and show the ERP modules you are allowed to use.</span>
+          </div>
+          <div class="hl" role="listitem">
+            <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
+            <b>No selling, ads or tracking</b>
+            <span>We do not sell your data, show advertising, or use third-party analytics or tracking.</span>
+          </div>
+          <div class="hl" role="listitem">
+            <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+            <b>Data stays in the ERP</b>
+            <span>Your business data stays in HESAL’s ERP system; the app is a secure window to it.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="information">
+        <h2><span class="num">2</span>Information the app handles</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Information</th><th>Why it is used</th><th>Where it is kept</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Information">Username/email and password you enter at sign-in</td>
+                <td data-label="Why it is used">To sign you in to HESAL’s ERP</td>
+                <td data-label="Where it is kept">Sent securely (HTTPS) to HESAL’s ERP server. Your password is not stored by the app.</td>
+              </tr>
+              <tr>
+                <td data-label="Information">Sign-in token and ERP session identifier</td>
+                <td data-label="Why it is used">To keep you signed in and open ERP screens without signing in again</td>
+                <td data-label="Where it is kept">Stored in your device’s encrypted secure storage (iOS Keychain / Android Keystore) until you sign out or it expires.</td>
+              </tr>
+              <tr>
+                <td data-label="Information">Profile details returned by the ERP: name, username, email, company, user ID and module permissions</td>
+                <td data-label="Why it is used">To show your name and the modules you have access to</td>
+                <td data-label="Where it is kept">Stored on your device until you sign out.</td>
+              </tr>
+              <tr>
+                <td data-label="Information">Remembered username (optional)</td>
+                <td data-label="Why it is used">To pre-fill the sign-in screen if you choose “Remember my username”</td>
+                <td data-label="Where it is kept">Stored on your device until you turn it off.</td>
+              </tr>
+              <tr>
+                <td data-label="Information">ERP records you view, create or edit (e.g. sales orders, projects, payslips), and any files you choose to attach</td>
+                <td data-label="Why it is used">To let you use the ERP from your phone</td>
+                <td data-label="Where it is kept">Kept in HESAL’s ERP system, not by Xeten. The app does not keep separate copies.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The app does not access your location, contacts, microphone, or other personal data on your device. If you choose to attach a photo or file to an ERP record, the app only accesses the item you select, and only to upload it to the ERP.</p>
+      </section>
+
+      <section class="card" id="sharing">
+        <h2><span class="num">3</span>How information is shared</h2>
+        <p>Information is only sent between your device and HESAL’s ERP server at <span class="domain">erp.hesaluae.com</span>. We do not share it with advertisers, data brokers, or analytics providers. Information may be disclosed if required by law.</p>
+        <p>Your use of the ERP itself, and how HESAL handles the business and employee data inside it, is governed by HESAL’s own internal policies and your employment or service agreement.</p>
+      </section>
+
+      <section class="card" id="security">
+        <h2><span class="num">4</span>Security</h2>
+        <p>All communication uses encrypted HTTPS connections. Sign-in credentials are stored in the operating system’s secure storage. Your session ends automatically when it expires, and signing out removes the stored sign-in data from your device.</p>
+      </section>
+
+      <section class="card" id="retention">
+        <h2><span class="num">5</span>Data retention and deletion</h2>
+        <div class="split">
+          <div>
+            <h3>On your device</h3>
+            <p>Signing out or uninstalling the app deletes the data the app stored.</p>
+          </div>
+          <div>
+            <h3>In the ERP</h3>
+            <p>User accounts are created and managed by HESAL. The app cannot create accounts. To close your account or request deletion of your data, contact HESAL’s administrator or us using the details below.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="children">
+        <h2><span class="num">6</span>Children</h2>
+        <p>The app is intended for business use by employees and authorised users, and is not directed at children.</p>
+      </section>
+
+      <section class="card" id="changes">
+        <h2><span class="num">7</span>Changes to this policy</h2>
+        <p>We may update this policy from time to time. The updated version will be posted on this page with a new effective date.</p>
+      </section>
+
+      <section class="card contact" id="contact">
+        <h2><span class="num">8</span>Contact</h2>
+        <p class="org">Xeten Information Services Private Limited</p>
+        <dl>
+          <dt>Email</dt>
+          <dd><a href="mailto:info@xetensolutions.com">info@xetensolutions.com</a></dd>
+          <dt>Address</dt>
+          <dd>No. 6/858, 2nd Floor, Suite No. 876, Kakkanad,<br>Kochi, Kerala, India - 682030</dd>
+        </dl>
+      </section>
+
+      <footer>© Xeten Information Services Private Limited. Published for the Hesal app.</footer>
+    </main>
+  </div>
+</div>
+
+</body>
+</html>
